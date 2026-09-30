@@ -6,6 +6,10 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   { url: '/images/hero-bg.jpg', category: 'Match', caption: 'Leads Cup Action' },
-  { url: '/images/team-photo.jpg', category: 'Community', caption: 'Squad Goals' },
-  // You can add more filenames here as you upload them to public/images/
+  { url: '/images/team-photo.jpg', category: 'Community', caption: 'The Squad' },
+  { url: '/images/leads-1.jpg', category: 'Tournament', caption: 'Leads Cup Highlights' },
+  { url: '/images/leads-2.jpg', category: 'Match', caption: 'Match Day Energy' },
+  { url: '/images/leads-3.jpg', category: 'Tournament', caption: 'AV Gardens in Action' },
+  { url: '/images/leads-4.jpg', category: 'Match', caption: 'Lahore Football' },
+  { url: '/images/leads-5.jpg', category: 'Tournament', caption: 'Competion Focus' },
 ];
