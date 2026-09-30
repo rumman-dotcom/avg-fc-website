@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 242, 237, 227;
-  --background-end-rgb: 242, 237, 227;
+@layer base {
+  :root {
+    --burgundy: 92 32 40;
+    --gold: 201 164 92;
+    --midnight: 15 23 42;
+    --bone: 242 237 227;
+  }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+html {
   scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Cinematic text styles */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
 }
