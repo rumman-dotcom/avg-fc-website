@@ -42,7 +42,7 @@ export default function MatchesPage() {
         <section className="bg-midnight text-white relative overflow-hidden rounded-3xl">
           {/* New Background Image Integration */}
           <div className="absolute inset-0 opacity-20">
-             <img src="/images/juniors-1.jpg" className="w-full h-full object-cover" alt="Background" />
+             <img src="/images/juniors-3.jpg" className="w-full h-full object-cover" alt="Background" />
           </div>
           
           <div className="relative z-10 p-12 md:p-20">
