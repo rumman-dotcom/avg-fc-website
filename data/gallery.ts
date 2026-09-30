@@ -11,5 +11,9 @@ export const galleryImages: GalleryImage[] = [
   { url: '/images/leads-2.jpg', category: 'Match', caption: 'Match Day Energy' },
   { url: '/images/leads-3.jpg', category: 'Tournament', caption: 'AV Gardens in Action' },
   { url: '/images/leads-4.jpg', category: 'Match', caption: 'Lahore Football' },
-  { url: '/images/leads-5.jpg', category: 'Tournament', caption: 'Competion Focus' },
+  { url: '/images/leads-5.jpg', category: 'Tournament', caption: 'Competition Focus' },
+  { url: '/images/juniors-1.jpg', category: 'Community', caption: 'Champions Ceremony' },
+  { url: '/images/juniors-2.jpg', category: 'Tournament', caption: 'Juniors Season IV' },
+  { url: '/images/juniors-3.jpg', category: 'Community', caption: 'Youth Development' },
+  { url: '/images/juniors-4.jpg', category: 'Tournament', caption: 'Future Stars' },
 ];
