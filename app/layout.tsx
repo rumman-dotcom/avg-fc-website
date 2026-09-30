@@ -15,17 +15,17 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "AV Gardens FC | Home of Lahore Football",
-  description: "Official website of AV Gardens FC, a community football club in Lahore, Pakistan.",
+  description: "Official website of AV Gardens FC, a grassroots community football club in Lahore, Pakistan.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${bebas.variable} ${montserrat.variable} antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${bebas.variable} ${montserrat.variable} antialiased bg-bone font-montserrat`}>
         {children}
       </body>
     </html>
