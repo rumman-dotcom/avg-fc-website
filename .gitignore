@@ -1,0 +1,11 @@
+# Installed dependencies
+/node_modules/
+
+# Next.js generated output
+/.next/
+/out/
+/build/
+/.vercel/
+
+# TypeScript build cache
+*.tsbuildinfo

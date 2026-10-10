@@ -1,13 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 export default function AboutPage() {
   return (
     <main className="bg-bone min-h-screen">
-      {/* SUB-NAV */}
-      <nav className="bg-midnight px-8 py-6 flex justify-between items-center border-b border-gold/30">
-        <a href="/" className="font-bebas text-2xl text-white">← Back to Home</a>
-        <span className="font-bebas text-2xl text-gold uppercase tracking-widest">Our Story</span>
-      </nav>
+      <Navbar />
 
       {/* HERO SECTION */}
       <header className="relative py-32 px-6 overflow-hidden bg-midnight">
@@ -15,13 +13,13 @@ export default function AboutPage() {
           <img src="/images/hero-bg.jpg" className="w-full h-full object-cover" alt="Background" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="font-bebas text-7xl md:text-9xl text-white mb-6 uppercase italic">Built in Lahore.</h1>
+          <h1 className="font-bebas text-6xl sm:text-7xl md:text-9xl text-white mb-6 uppercase italic">Built in Lahore.</h1>
           <p className="text-gold font-bebas text-2xl tracking-[0.4em] uppercase">Established 2023</p>
         </div>
       </header>
 
       {/* CONTENT SECTIONS */}
-      <section className="py-24 px-6 max-w-5xl mx-auto space-y-32">
+      <section className="py-16 md:py-24 px-5 sm:px-6 max-w-5xl mx-auto space-y-16 md:space-y-32">
         
         {/* The Origin */}
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -42,15 +40,15 @@ export default function AboutPage() {
            <div className="grid md:grid-cols-3 gap-12 text-center">
               <div>
                 <p className="font-bebas text-6xl text-gold">100+</p>
-                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Match Wins</p>
+                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Match Wins Over 2.5 Years</p>
               </div>
               <div>
                 <p className="font-bebas text-6xl text-gold">4</p>
-                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Juniors Seasons</p>
+                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Juniors Tournament Seasons Hosted</p>
               </div>
               <div>
-                <p className="font-bebas text-6xl text-gold">2</p>
-                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Years of Growth</p>
+                <p className="font-bebas text-6xl text-gold">2023</p>
+                <p className="font-bold uppercase tracking-widest text-xs text-midnight/40">Established</p>
               </div>
            </div>
         </div>
@@ -66,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       <footer className="bg-midnight py-20 text-center text-white border-t border-gold/30">
-        <a href="/contact" className="bg-gold text-midnight font-bebas text-2xl px-12 py-4 hover:bg-white transition inline-block uppercase">Join The Community</a>
+        <Link href="/contact" className="bg-gold text-midnight font-bebas text-2xl px-8 sm:px-12 py-4 hover:bg-white transition inline-block uppercase">Join The Community</Link>
       </footer>
     </main>
   );

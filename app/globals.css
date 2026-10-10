@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
 
 @layer base {
   :root {
@@ -19,4 +18,10 @@ html {
 .text-stroke {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   color: transparent;
+}
+
+@media (hover: none) {
+  .gallery-image {
+    filter: grayscale(0);
+  }
 }
