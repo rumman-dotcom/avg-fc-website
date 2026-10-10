@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import { tournaments } from '../../data/tournaments';
 
 export default function MatchesPage() {
@@ -7,21 +8,18 @@ export default function MatchesPage() {
 
   return (
     <main className="bg-bone min-h-screen">
-      <nav className="bg-midnight px-8 py-6 flex justify-between items-center border-b border-gold/30">
-        <a href="/" className="font-bebas text-2xl text-white">← Back to Home</a>
-        <span className="font-bebas text-2xl text-gold uppercase tracking-widest">Matches & Stats</span>
-      </nav>
+      <Navbar />
 
       <header className="py-24 px-6 text-center bg-white border-b border-gold/10">
-        <h1 className="font-bebas text-8xl text-burgundy mb-4 uppercase italic">Competitions</h1>
+        <h1 className="font-bebas text-5xl sm:text-7xl md:text-8xl text-burgundy mb-4 uppercase italic">Competitions</h1>
         <p className="text-gray-400 font-bold uppercase tracking-[0.3em] text-sm">Official Records • Tournament History</p>
       </header>
 
-      <div className="max-w-7xl mx-auto px-6 py-24 space-y-32">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 py-14 md:py-24 space-y-16 md:space-y-32">
         
         {/* MAJOR TOURNAMENTS SECTION */}
         <section>
-          <h2 className="font-bebas text-5xl text-burgundy mb-12 flex items-center gap-6 uppercase">
+          <h2 className="font-bebas text-3xl sm:text-5xl text-burgundy mb-8 md:mb-12 flex items-center gap-3 sm:gap-6 uppercase">
             Tournament History <div className="h-[2px] flex-grow bg-gold/20"></div>
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -45,8 +43,8 @@ export default function MatchesPage() {
              <img src="/images/juniors-3.jpg" className="w-full h-full object-cover" alt="Background" />
           </div>
           
-          <div className="relative z-10 p-12 md:p-20">
-            <h2 className="font-bebas text-6xl text-gold mb-4 uppercase italic">AV Gardens Juniors</h2>
+          <div className="relative z-10 p-6 sm:p-10 md:p-20">
+            <h2 className="font-bebas text-4xl sm:text-5xl md:text-6xl text-gold mb-4 uppercase italic">AV Gardens Juniors</h2>
             <p className="text-white/60 font-bold uppercase tracking-[0.2em] text-xs mb-16 italic underline decoration-gold underline-offset-8">Club Organized Events</p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -1,31 +1,10 @@
-import React from 'react';
-// Changed these two lines to fix the import error
-import { tournaments } from '../data/tournaments';
-import { players } from '../data/players';
+import Link from 'next/link';
+import Navbar from './components/Navbar';
 
 export default function HomePage() {
   return (
     <main className="relative">
-      {/* 1. CINEMATIC NAV */}
-      <nav className="fixed w-full z-50 px-4 md:px-6 py-6 transition-all">
-        <div className="max-w-7xl mx-auto flex justify-between items-center bg-midnight/80 backdrop-blur-md border border-white/10 px-4 md:px-8 py-4 rounded-full">
-          <div className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Crest" className="h-8 md:h-10 w-auto" />
-            <span className="font-bebas text-2xl md:text-3xl text-white tracking-tighter uppercase">AV Gardens FC</span>
-          </div>
-          <div className="hidden lg:flex gap-10 font-bebas text-xl text-white/80 uppercase tracking-widest">
-            <a href="/" className="text-gold">Home</a>
-            <a href="/about" className="hover:text-white transition">About</a>
-            <a href="/squad" className="hover:text-white transition">Squad</a>
-            <a href="/matches" className="hover:text-white transition">Matches</a>
-            <a href="/gallery" className="hover:text-white transition">Gallery</a>
-            <a href="/contact" className="hover:text-white transition">Contact</a>
-          </div>
-          <a href="/contact" className="bg-burgundy text-white font-bebas text-lg md:text-xl px-4 md:px-6 py-2 rounded-full hover:bg-white hover:text-burgundy transition">
-            Partner
-          </a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* 2. HERO SECTION */}
       <section className="relative h-screen flex items-center justify-center bg-midnight overflow-hidden">
@@ -38,15 +17,15 @@ export default function HomePage() {
           <div className="flex justify-center mb-8">
             <img src="/images/logo.png" className="h-24 md:h-32 w-auto animate-pulse" alt="Crest" />
           </div>
-          <h1 className="font-bebas text-[15vw] md:text-[10rem] text-white leading-none italic tracking-tighter uppercase">
+          <h1 className="font-bebas text-[14vw] sm:text-[15vw] md:text-[10rem] text-white leading-none italic tracking-tighter uppercase">
             AV Gardens <span className="text-stroke">FC</span>
           </h1>
           <p className="font-montserrat text-gold font-bold text-xs md:text-xl tracking-[0.3em] md:tracking-[0.5em] uppercase mb-12">
             Lahore • Football • Community
           </p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 font-bebas">
-            <a href="/squad" className="bg-white text-midnight px-8 md:px-12 py-3 md:py-4 text-xl md:text-2xl hover:bg-gold transition transform hover:-translate-y-1">The Squad</a>
-            <a href="/about" className="border-2 border-white/30 text-white px-8 md:px-12 py-3 md:py-4 text-xl md:text-2xl hover:bg-white hover:text-midnight transition transform hover:-translate-y-1">Our Story</a>
+            <Link href="/squad" className="bg-white text-midnight px-6 sm:px-8 md:px-12 py-3 md:py-4 text-xl md:text-2xl hover:bg-gold transition transform hover:-translate-y-1">The Squad</Link>
+            <Link href="/about" className="border-2 border-white/30 text-white px-6 sm:px-8 md:px-12 py-3 md:py-4 text-xl md:text-2xl hover:bg-white hover:text-midnight transition transform hover:-translate-y-1">Our Story</Link>
           </div>
         </div>
 
@@ -54,7 +33,7 @@ export default function HomePage() {
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl hidden md:grid grid-cols-3 gap-4 px-6">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 text-center">
             <p className="font-bebas text-4xl text-gold">100+</p>
-            <p className="text-[10px] text-white/50 uppercase font-bold tracking-widest">Wins Recorded</p>
+            <p className="text-[10px] text-white/50 uppercase font-bold tracking-widest">Wins Over 2.5 Years</p>
           </div>
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 text-center">
             <p className="font-bebas text-4xl text-gold">2023</p>
@@ -62,7 +41,7 @@ export default function HomePage() {
           </div>
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 text-center">
             <p className="font-bebas text-4xl text-gold">4 SEASONS</p>
-            <p className="text-[10px] text-white/50 uppercase font-bold tracking-widest">Juniors Organized</p>
+            <p className="text-[10px] text-white/50 uppercase font-bold tracking-widest">Juniors Tournament Seasons Hosted</p>
           </div>
         </div>
       </section>
@@ -79,7 +58,7 @@ export default function HomePage() {
             <p className="text-lg md:text-xl text-midnight/70 leading-relaxed mb-10">
               Based in Ali View Garden, Phase 3, Lahore, AV Gardens FC is a grassroots club built on organization and ambition. We provide a platform for both senior and junior talent to thrive in a structured football environment.
             </p>
-            <a href="/about" className="font-bebas text-2xl text-burgundy border-b-4 border-gold pb-1 hover:text-gold transition uppercase">Read Full Story</a>
+            <Link href="/about" className="font-bebas text-2xl text-burgundy border-b-4 border-gold pb-1 hover:text-gold transition uppercase">Read Full Story</Link>
           </div>
         </div>
       </section>
@@ -113,7 +92,7 @@ export default function HomePage() {
          <div className="relative z-10 px-6">
             <h2 className="font-bebas text-6xl md:text-7xl text-white mb-6 uppercase">Partner With Us</h2>
             <p className="text-gold font-bold uppercase tracking-widest mb-10 max-w-xl mx-auto text-sm md:text-base">Help us build the future of Lahore football. Sponsorship and community partnership opportunities available.</p>
-            <a href="/contact" className="bg-gold text-midnight font-bebas text-2xl px-12 py-4 hover:bg-white transition inline-block uppercase">Become a Partner</a>
+            <Link href="/contact" className="bg-gold text-midnight font-bebas text-2xl px-8 sm:px-12 py-4 hover:bg-white transition inline-block uppercase">Become a Partner</Link>
          </div>
       </section>
 
@@ -124,7 +103,7 @@ export default function HomePage() {
           <p className="font-bebas text-2xl text-burgundy mb-2 uppercase tracking-tighter">AV Gardens FC</p>
           <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-8">Ali View Garden, Phase 3, Lahore</p>
           <div className="flex justify-center gap-8 font-bebas text-xl text-gray-400 mb-12">
-            <a href="https://instagram.com/avgardensfc" target="_blank" className="hover:text-burgundy transition">Instagram</a>
+            <a href="https://instagram.com/avgardensfc" target="_blank" rel="noopener noreferrer" className="hover:text-burgundy transition">Instagram</a>
             <a href="mailto:avgardensfc@gmail.com" className="hover:text-burgundy transition">Email</a>
           </div>
           <p className="text-[9px] text-gray-300 uppercase font-bold tracking-[0.2em]">© 2023 - 2026 AV Gardens FC • Home of Lahore Football</p>

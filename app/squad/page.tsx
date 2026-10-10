@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import { players } from '../../data/players';
 
 export default function SquadPage() {
@@ -6,27 +7,23 @@ export default function SquadPage() {
 
   return (
     <main className="bg-bone min-h-screen">
-       {/* SIMPLE SUB-NAV */}
-       <nav className="bg-midnight px-8 py-6 flex justify-between items-center border-b border-gold/30">
-          <a href="/" className="font-bebas text-2xl text-white">← Back to Home</a>
-          <span className="font-bebas text-2xl text-gold uppercase tracking-widest">The Roster</span>
-       </nav>
+       <Navbar />
 
        <header className="py-20 px-6 text-center bg-white border-b border-gold/10">
-          <h1 className="font-bebas text-8xl text-burgundy mb-4 uppercase">The Squad</h1>
+          <h1 className="font-bebas text-5xl sm:text-7xl md:text-8xl text-burgundy mb-4 uppercase">The Squad</h1>
           <div className="h-1 w-24 bg-gold mx-auto mb-6"></div>
           <p className="text-gray-400 font-bold uppercase tracking-[0.3em] text-sm">Official Selection • Lahore, PK</p>
        </header>
 
-       <div className="max-w-7xl mx-auto px-6 py-24 space-y-24">
+       <div className="max-w-7xl mx-auto px-5 sm:px-6 py-14 md:py-24 space-y-16 md:space-y-24">
           {categories.map(cat => {
             const catPlayers = players.filter(p => p.position === cat);
             if (catPlayers.length === 0) return null;
 
             return (
               <section key={cat}>
-                <h2 className="font-bebas text-4xl text-gold mb-12 border-b border-gold/20 pb-4 uppercase tracking-widest">{cat}s</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                <h2 className="font-bebas text-3xl sm:text-4xl text-gold mb-8 md:mb-12 border-b border-gold/20 pb-4 uppercase tracking-widest">{cat}s</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-12">
                   {catPlayers.map(player => (
                     <div key={player.name} className="group">
                       <div className="aspect-[3/4] bg-white relative overflow-hidden border-b-8 border-burgundy group-hover:border-gold transition-all duration-500 shadow-lg">
